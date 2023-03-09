@@ -4,8 +4,31 @@
   box-sizing: border-box;
 }
 
+html {
+  background: rgb(253,29,29);
+  background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(253,153,29,1) 66%, rgba(254,202,27,1) 100%);
+  font-family: arial, sans-serif;
+  color: #ccc;  
+}
+
 h1 {
+  margin-top: 20px;
   margin-bottom: 16px;
+  text-align: center;
+  font-family: pokemonSolid;
+  color: #333;
+  font-size: xx-large;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: pokemonSolid;
+  src: url("./static/Pokemon Solid.ttf");
 }
 
 main {
@@ -16,17 +39,102 @@ main {
 
 label {
   padding: 8px;
+  margin: 4px;
+  border: rgba(51, 51, 51, .5) solid 1px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
 }
 
 label span {
   display: inline-block;
   padding-left: 8px;
+  color:#333;
+  font-family: pokemonSolid;
 }
 
 input {
   padding: 4px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+
+#pokemon-name {
+  margin-right: 4px;
+}
+
 button {
-  padding: 4px;
+  padding: 6px;
+  background-color: #2563eb;
+  border-width: 0px;
+  border-radius: 8px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b82f6;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-justify: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-of-type(odd) td {
+  text-align: center;
+  border: 1px solid rgba(221, 221, 221, .5);
+}
+
+tr:nth-of-type(even) td {
+  text-align: center;
+  border: 1px solid rgba(51, 51, 51, .5);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(51, 51, 51, .5);
+  color: rgba(221, 221, 221, .5);
+  border: 1px solid rgba(221, 221, 221, .5);
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(221, 221, 221, .5);
+  /* opacity: 50%; */
+  color: #333;
+  border: 1px solid #333;
+  width: 100%;
+}
+
+th {
+  background-color: #333;
+  color: #ddd;
+  opacity: 1;
+  border-radius: 4px;
+  border: 1px solid rgba(221, 221, 221, .5);
+  text-align: center;
+  padding: 8px;
+  max-width: 50%;
+  text-justify: auto;
+}
+
+.pokemons {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
